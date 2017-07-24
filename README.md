@@ -13,4 +13,5 @@
 <p>Also before start coding set WP_DEBUG as true in wp-config.php file.</p>
 <h3>Creating a Plugin File Header</h3>
 <p>The next step is to create a PHP file with a name derived from your chosen Plugin name or index.php file name. Plugins directory in their installation – usually wp-content/plugins/ – so no two Plugins in that directory can have the same PHP file name.</p>
-
+<h3>Activating Our Plugin</h3>
+<p>For activation plugin use function for wordpress version control during activation.</p>
