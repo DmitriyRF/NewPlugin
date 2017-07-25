@@ -15,3 +15,5 @@
 <p>The next step is to create a PHP file with a name derived from your chosen Plugin name or index.php file name. Plugins directory in their installation – usually wp-content/plugins/ – so no two Plugins in that directory can have the same PHP file name.</p>
 <h3>Activating Our Plugin</h3>
 <p>For activation plugin use function for wordpress version control during activation.</p>
+<h3>Trick to Secure a Plugin</h3>
+<p>One what you can do to secure plugin is prevent users to calling the plugin in directly. Because frequently, hackers tried visit the file directly instead wordpress loaded.</p>
