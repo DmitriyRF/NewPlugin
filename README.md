@@ -17,3 +17,5 @@
 <p>For activation plugin use function for wordpress version control during activation.</p>
 <h3>Trick to Secure a Plugin</h3>
 <p>One what you can do to secure plugin is prevent users to calling the plugin in directly. Because frequently, hackers tried visit the file directly instead wordpress loaded.</p>
+<h3>Creating a Custom Post Type</h3>
+<p>Register post by function register_post_type() that should be invoked through the 'init' action. The parameters is described on codex page.</p> 
