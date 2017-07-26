@@ -19,3 +19,5 @@
 <p>One what you can do to secure plugin is prevent users to calling the plugin in directly. Because frequently, hackers tried visit the file directly instead wordpress loaded.</p>
 <h3>Creating a Custom Post Type</h3>
 <p>Register post by function register_post_type() that should be invoked through the 'init' action. The parameters is described on codex page.</p> 
+<h3>Metadata and Metaboxes</h3>
+<p>The Metadata API is a simple and standarized way for retrieving and manipulating metadata of various WordPress object types. it's like box for custom field.</p>
