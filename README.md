@@ -21,3 +21,5 @@
 <p>Register post by function register_post_type() that should be invoked through the 'init' action. The parameters is described on codex page.</p> 
 <h3>Metadata and Metaboxes</h3>
 <p>The Metadata API is a simple and standarized way for retrieving and manipulating metadata of various WordPress object types. it's like box for custom field.</p>
+<h3>Enqueueing Files</h3>
+<p>Just add all external assets in plugin folder and include there inscript enqueue.</p>

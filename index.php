@@ -16,7 +16,7 @@ if ( !function_exists( 'add_action' ) ) {
 }
 
 //Setup
-
+define( 'NEWPLUGIN_URL', __FILE__ );
 define( 'DIRECTORY_PLUGIN_PATH', 	plugin_dir_path( __FILE__ ) );
 define( 'SITE_PLUGIN_URL', 			plugin_dir_url( __FILE__ )  );
 //Includes
