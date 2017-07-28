@@ -22,4 +22,13 @@
 <h3>Metadata and Metaboxes</h3>
 <p>The Metadata API is a simple and standarized way for retrieving and manipulating metadata of various WordPress object types. it's like box for custom field.</p>
 <h3>Enqueueing Files</h3>
-<p>Just add all external assets in plugin folder and include there inscript enqueue.</p>
+<p>Just add all external assets in plugin folder and include there in script/style enqueue.</p>
+<h3>Working with Meta Data</h3>
+<p>Create input field in Item metabox, but didn't make form wrapper. And action to save post and fields. To this step will need:</p>
+<ol>
+    <li><b>save_post</b>is an action triggered whenever a post or page is created or updated, which could be from an import, post/page edit form, xmlrpc, or post by email. </li>
+    <li><b>The function update_post_meta()</b> updates the value of an existing meta key (custom field) for the specified post.</li>
+    <li>The <b>Metadata API</b> is a simple and standarized way for retrieving and manipulating metadata of various WordPress object types.</li>
+    <li><b>Meta-data</b> is ability to allow post authors to assign custom fields(extra information) to a post.</li>
+    <li><b>add_meta_boxes()</b> — hook allows meta box registration for any post type and passes two parameters: $post_type and $post. <b>add_meta_boxes_{post_type}</b> — hook will only run when editing a specific post type. This will only receive 1 parameter - $post.</li>
+</ol>
