@@ -32,3 +32,5 @@
     <li><b>Meta-data</b> is ability to allow post authors to assign custom fields(extra information) to a post.</li>
     <li><b>add_meta_boxes()</b> — hook allows meta box registration for any post type and passes two parameters: $post_type and $post. <b>add_meta_boxes_{post_type}</b> — hook will only run when editing a specific post type. This will only receive 1 parameter - $post.</li>
 </ol>
+<h3>Filter Hooks for Post Content</h3>
+<p>Modify content for custom post through filter hook. It easy way to include metadata in html template. To more clearly code, separate post template across file item-template.php and include them in filter function through file_get_contents();.</p>
