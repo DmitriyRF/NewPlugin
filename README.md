@@ -34,3 +34,5 @@
 </ol>
 <h3>Filter Hooks for Post Content</h3>
 <p>Modify content for custom post through filter hook. It easy way to include metadata in html template. To more clearly code, separate post template across file item-template.php and include them in filter function through file_get_contents();.</p>
+<h3>Making our Strings Translatable</h3>
+<p>Use str_replace() function to make post template translatable.</p>
