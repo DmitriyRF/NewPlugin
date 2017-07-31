@@ -25,6 +25,7 @@ include( 'includes/init.php' );
 include( 'includes/admin/init.php' );
 include( 'process/save-post.php' );
 include( 'process/filter-content.php');
+include( 'includes/front/enqueue.php');
 
 
 //Hooks
@@ -34,5 +35,6 @@ add_action( 'admin_init', 'newplugin_admin_init');
 //As of WP 3.7, an alternative action has been introduced, which is called for specific post types: save_post_{post_type}. Hooking to this action you wouldn't have to check on the post type (ie: if ( $slug != $_POST['post_type'] ) in the sample above).
 add_action( 'save_post_item', 'np_save_post_admin', 10, 3);// 10 is priority, 3 is number of np_save_post_admin() arguments
 add_filter( 'the_content', 'np_filter_item_content');
+add_action( 'wp_enqueue_scripts', 'np_plugin_enqueue_scripts', 9999 );
 
 //Shortcodes

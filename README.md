@@ -38,3 +38,5 @@
 <p>Use str_replace() function to make post template translatable.</p>
 <h3>Creating Database Tables</h3>
 <p>During activation use dbDelta(SQL query) function. The simple way take SQL query is copy from phpMyAdmin export table file. Just create table, export table and drop table.</p>
+<h3>Including the jQuery Rating Plugin</h3>
+<p>Use wordpress enqueue scripts action to add style and scripts to front pages. Add Rating plugin for jQuery for stars rating.</p>
