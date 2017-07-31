@@ -26,6 +26,8 @@ include( 'includes/admin/init.php' );
 include( 'process/save-post.php' );
 include( 'process/filter-content.php');
 include( 'includes/front/enqueue.php');
+include( 'process/rate-item.php');
+
 
 
 //Hooks
@@ -36,5 +38,8 @@ add_action( 'admin_init', 'newplugin_admin_init');
 add_action( 'save_post_item', 'np_save_post_admin', 10, 3);// 10 is priority, 3 is number of np_save_post_admin() arguments
 add_filter( 'the_content', 'np_filter_item_content');
 add_action( 'wp_enqueue_scripts', 'np_plugin_enqueue_scripts', 9999 );
+//This hook allows you to create custom handlers for your own custom AJAX requests. The wp_ajax_ hook follows the format "wp_ajax_$youraction", where $youraction is your AJAX request's 'action' property.
+add_action( 'wp_ajax_np_rate_item', 'np_rate_item');
+add_action( 'wp_ajax_nopriv_np_rate_item', 'np_rate_item');//for users how not login
 
 //Shortcodes

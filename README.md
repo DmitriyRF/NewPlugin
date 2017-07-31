@@ -40,3 +40,5 @@
 <p>During activation use dbDelta(SQL query) function. The simple way take SQL query is copy from phpMyAdmin export table file. Just create table, export table and drop table.</p>
 <h3>Including the jQuery Rating Plugin</h3>
 <p>Use wordpress enqueue scripts action to add style and scripts to front pages. Add Rating plugin for jQuery for stars rating.</p>
+<h3>Sending AJAX Requests from the Front End</h3>
+<p>This step is add custom action hook ajax in index.php file. Also use wp_localize_script() for localized translations of any strings used in your script. In np.main.scripts.js file realize ajax script. And in rate-item.php will be function accepting request.</p>

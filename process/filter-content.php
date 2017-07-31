@@ -21,6 +21,7 @@ function np_filter_item_content( $content){
 	$item_html 			=	str_replace( 'RADIO_INPUT1_I18N', 	__( 'Radio input 1', 'newplugin'), 	$item_html);
 	$item_html 			=	str_replace( 'CHECK_I18N', 			__( 'Select value', 'newplugin'), 	$item_html);
 	$item_html 			=	str_replace( 'RATE_I18N', 			__( 'Rate', 'newplugin'), 			$item_html);
+	$item_html 			=	str_replace( 'ITEM_ID', 			$post->ID, 			$item_html);
 
 	return $item_html . $content;
 
