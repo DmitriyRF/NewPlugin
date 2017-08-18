@@ -16,6 +16,8 @@ function np_plugin_enqueue_scripts(){
 	wp_localize_script( 'mainjs', "item_obj", array(
 		'ajax_url' 						=>	admin_url( "admin-ajax.php" ) 
 	));
+	// mainjs is file to sending AJAX request
+	// item_obj is object that we use to referense the values
 
 	wp_enqueue_script( 'rateitjs');
 	wp_enqueue_script( 'mainjs');
