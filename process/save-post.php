@@ -27,8 +27,9 @@ function np_save_post_admin( $post_id, $post, $update ){
 	$item_data['np_radiobox_1']			=	isset( $_POST['np_radio_check'] ) ? $_POST['np_radio_check'] : '';								
 	$item_data['np_radiobox_text_1']	=	isset($item_data['np_radiobox_1']) && $item_data['np_radiobox_1'] == 'on' ? sanitize_text_field( $_POST['np_input_one_value'] )	:	'';
 
-	$item_data['np_number']				=	$_POST['np_select_number'];
-	$item_data['np_rating']				=	0;
+	$item_data['np_number']				=	$_POST['np_select_number']; 
+	global $wpdb;
+	$item_data['np_rating']				=	round( $wpdb->get_var("SELECT AVG('rating') FROM " . $wpdb->prefix . " item_ratings WHERE item_id = '" . $post_id . "'"), 1);
 	$item_data['np_rating_count']		=	0;
 
  // update_post_meta( $post_id, $meta_key, $meta_value, $prev_value );

@@ -3,11 +3,10 @@
 //function adding_custom_meta_boxes( $post_type, $post )
 function np_recipe_options_callback( $post ){
 	//									get_post_meta( int $post_id, string $key = '', bool $single = false )but in 90% should be $single = true
-	$item_data						=	get_post_meta( $post->ID, 'item_data', true );
+	$item_data						=	get_post_meta( $post->ID, 'item_data', true );//Retrieve post meta field for a post.
 
 	if( ! $item_data){
 		$item_data					=	array(
-			'np_name'				=>	'',
 			'np_name'				=>	'',
 			'np_checkbox_1' 		=>	'',
 			'np_checkbox_text_1'	=>	'',

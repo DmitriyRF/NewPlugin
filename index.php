@@ -36,6 +36,7 @@ add_action( 'init', 'newplugin_init');
 add_action( 'admin_init', 'newplugin_admin_init');
 //As of WP 3.7, an alternative action has been introduced, which is called for specific post types: save_post_{post_type}. Hooking to this action you wouldn't have to check on the post type (ie: if ( $slug != $_POST['post_type'] ) in the sample above).
 add_action( 'save_post_item', 'np_save_post_admin', 10, 3);// 10 is priority, 3 is number of np_save_post_admin() arguments
+//The "the_content" filter is used to filter the content of the post after it is retrieved from the database and before it is printed to the screen.
 add_filter( 'the_content', 'np_filter_item_content');
 add_action( 'wp_enqueue_scripts', 'np_plugin_enqueue_scripts', 9999 );
 //This hook allows you to create custom handlers for your own custom AJAX requests. The wp_ajax_ hook follows the format "wp_ajax_$youraction", where $youraction is your AJAX request's 'action' property.

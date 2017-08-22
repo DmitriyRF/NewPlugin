@@ -1,5 +1,5 @@
 <?php
-
+//This file handler for "rating's AJAX query". This file call's  AJAX when send query.
 function np_rate_item(){
 	// print_r($_POST);
 	// die();
@@ -7,7 +7,7 @@ function np_rate_item(){
 	global $wpdb;
 
 	$response					=	array( 'status' => 1);
-	$post_id					=	absint($_POST['rid']);
+	$post_id					=	absint( $_POST['rid'] );
 	$rating						=	round($_POST['rating'], 1);
 	$user_ip					=	$_SERVER['REMOTE_ADDR'];
 
@@ -30,9 +30,12 @@ function np_rate_item(){
 			'%d', '%f', '%s'
 		)
 	);
+	//Update me
+	$item_data					=	get_post_meta( $post_id, 'item_data', true);
+	$item_data['np_rating_count']++;
+	$item_data['np_rating']		=	round( $wpdb->get_var("SELECT AVG(rating) FROM " . $wpdb->prefix . "item_ratings WHERE item_id = '" . $post_id . "'"), 1);
+	update_post_meta( $post_id, 'item_data', $item_data);
 
 	$response['status']			=	2;
 	wp_send_json( $response );
-
-
 }

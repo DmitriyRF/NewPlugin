@@ -44,3 +44,5 @@
 <p>This step is add custom action hook ajax in index.php file. Also use wp_localize_script() for localized translations of any strings used in your script. In np.main.scripts.js file realize ajax script. And in rate-item.php will be function accepting request.</p>
 <h3>Handling AJAX Requests and Inserting Data into the Database</h3>
 <p>To hendling request I get ID and Rating from sended AJAX request. Also take user IP from php server data. Then we insert this data in database which create by plugin activation. Now sending status=2. But user still able set reating many time. We check: if this user set rating then don't write in database(status=1) or if user didn't set rating then write his rating to database(status=2).</p>
+<h3>Averaging and Displaying the Rating</h3>
+<p>Change filter-content.php file to show item rating or not allow will set rating for users who set it before. In rate-item.php update rating after user evaluate. Now every user be able only set rating for one item.</p>

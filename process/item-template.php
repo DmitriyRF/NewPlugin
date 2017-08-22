@@ -7,6 +7,6 @@
 	<li><strong>CHECK_I18N: </strong>SELECT_PH</li>
 	<li>
 		<strong>RATE_I18N: </strong>
-		<div class="rateit" id="item_rating" data-rateit-resetable="false" data-rid="ITEM_ID"></div>
+		<div class="rateit" id="item_rating" data-rateit-resetable="false" data-rid="ITEM_ID" data-rateit-value="ITEM_RATING" READONLY_PLACEHOLDER></div>
 	</li>
 </ul>	
